@@ -1,7 +1,6 @@
 import React from "react";
 
-export const Cart =() =>{
+export const Shop =() =>{
 
     return <div> cart</div>
-} 
-
+}
