@@ -41,7 +41,8 @@ function App() {
       </div> */}
       
       <ShopContextProvider>
-        <Router>
+      <Favourites/>
+      <Router>
           <Navbar />
           <Routes>
             <Route path="/" element={<Shop />} />
@@ -50,7 +51,10 @@ function App() {
             <Route path="/favourites" element={<Favourites />} />
           </Routes>
         </Router>
+      
+       
       </ShopContextProvider>
+      
     </div>
   );
 }
