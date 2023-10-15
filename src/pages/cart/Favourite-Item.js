@@ -1,12 +1,13 @@
 import React, { useContext } from "react";
 import { ShopContext } from "../../context/shop-context";
 import { FavouriteContext } from "./Favourites";
-// import {addToFavourite};
+import { Favourites } from "./Favourites";
+
 
 export const FavouriteItem = (props) => {
-  const {  productName, price, productImage } = props.data;
+  const { id, productName, price, productImage } = props.data;
  
-  const { addToFavourites} = useContext(FavouriteContext);
+  const { addToFavourites,removeFromFavourites} = useContext(FavouriteContext);
 
   return (
     <div className="cartItem">
@@ -17,7 +18,7 @@ export const FavouriteItem = (props) => {
         </p>
         <p> Price: ${price}</p>
       </div>
-        <button className="addToCartBttn">
+        <button className="addToCartBttn" onClick={() => removeFromFavourites(id)}>
             Remove Favourites 
         </button>
        

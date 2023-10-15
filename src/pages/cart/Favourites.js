@@ -38,7 +38,9 @@ export const Favourites = (props) => {
   };
 
   return (
-   
+    <><FavouriteContext.Provider value={contextValue}>
+      {props.children}
+    </FavouriteContext.Provider>
     <div className="cart">
         <div>
           <h1>Favourites</h1>
@@ -52,10 +54,8 @@ export const Favourites = (props) => {
 
           })}
         </div>
-       <FavouriteContext.Provider value={contextValue}>
-          {props.children}
-        </FavouriteContext.Provider>
-      </div>  
+
+      </div></>  
   );
 };
 
